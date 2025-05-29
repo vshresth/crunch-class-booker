@@ -1,0 +1,7 @@
+services:
+  - type: cron
+    name: crunch-class-booker
+    runtime: python
+    schedule: "30 21 * * 0"  # Example: Sunday 9:30 PM EST (adjusted per class)
+    buildCommand: pip install -r requirements.txt && playwright install
+    startCommand: python main.py
